@@ -1,6 +1,17 @@
 <header class="header">
 	<div class="header__inner">
-		<img src="{{ logoPaths.x1 }}" srcset="{{ logoPaths.x2 }} 2x, {{ logoPaths.x3 }} 3x" class="header__logo">
-		<app-header-menu></app-header-menu>
+		<a href="#">
+			<img src="{{ logoPaths.x1 }}" srcset="{{ logoPaths.x2 }} 2x, {{ logoPaths.x3 }} 3x" class="header__logo">
+		</a>
+		<nav class="header-menu">
+			<ul class="header-menu__list">
+				<li *ngFor="let menuItem of menuItems" class="header-menu__list-item">
+					<a href="#" class="header-menu__link">
+						<img src="{{ menuItem.icons[0] }}" srcset="{{ menuItem.icons[1] }} 2x, {{ menuItem.icons[2] }} 3x" alt="" class="header-menu__icon">
+						<span [hidden]="!menuItem.text" class="header-menu__label">{{ menuItem.text }}</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </header>
