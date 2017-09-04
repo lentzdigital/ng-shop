@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-	background: blue;
-}
+@import 'assets/styles/general/variables';
+@import 'assets/styles/general/reset';
+@import 'assets/styles/general/typography';
