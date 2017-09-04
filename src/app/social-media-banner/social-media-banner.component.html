@@ -1,0 +1,10 @@
+<div class="social-media-banner">
+	<div class="social-media-banner__inner">
+		<h3 class="social-media-banner__title">Get us on</h3>
+		<div class="social-media-banner__icons">
+			<a *ngFor="let icon of socialIcons" href="{{ icon.link }}" title="{{ icon.title }}" class="social-media-banner__icon">
+				<img src="{{ icon.icon }}" alt="">
+			</a>
+		</div>
+	</div>
+</div>
