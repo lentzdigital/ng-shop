@@ -1,0 +1,17 @@
+<footer class="footer">
+	<div class="footer__inner">
+		<nav *ngFor="let menu of menus" class="footer__menu-container">
+			<ul class="footer__menu">
+				<h4 class="footer__title">{{ menu.title }}</h4>
+				<li *ngFor="let item of menu.items" class="footer__menu-item">
+					<a href="#">{{ item }}</a>
+				</li>
+			</ul>
+		</nav>
+		<img src="{{ payment }}" alt="" class="footer__payment">
+		<div class="footer__logo-container">
+			<img src="{{ logoPaths.x1 }}" srcset="{{ logoPaths.x2 }} 2x, {{ logoPaths.x3 }} 3x" class="footer__logo">
+			<span class="footer__copyright">Ecommerce PSD Theme</span>
+		</div>
+	</div>
+</footer>
