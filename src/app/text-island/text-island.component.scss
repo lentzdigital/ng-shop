@@ -1,0 +1,37 @@
+@import '../../assets/styles/include';
+
+.text-island {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		text-align: center;
+		max-width: 900px;
+	}
+
+	&__title {
+		position: relative;
+		font-size: $hs_xlarge;
+		font-weight: 700;
+		letter-spacing: 6px;
+		color: $c_dark_grey;
+		margin-bottom: 65px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -32.5px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 5px;
+			background: $c_primary;
+		}
+	}
+
+	&__text {
+		font-size: $ps_large;
+		line-height: 1.6;
+		color: $c_grey;
+	}
+}
