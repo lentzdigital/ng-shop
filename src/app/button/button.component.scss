@@ -1,0 +1,20 @@
+@import '../../assets/styles/include';
+
+.button {
+	width: 270px;
+	height: 40px;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: $ps_medium;
+	text-decoration: none;
+	text-transform: uppercase;
+	/** Flex */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: letter-spacing .3s;
+
+	&:hover {
+		letter-spacing: 1px;
+	}
+}
