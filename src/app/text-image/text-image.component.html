@@ -1,0 +1,18 @@
+<div class="text-image" [ngClass]="getDirection(direction)">
+	<div class="text-image__image">
+		<img [src]="getImage()" alt="">
+	</div>
+	<div class="text-image__content" [ngClass]="getStyle(style)">
+		<h3 class="text-image__title">{{ title }}</h3>
+		<p class="text-image__text">{{ text }}</p>
+		<ul class="text-image__icons">
+			<li *ngFor="let feature of features" class="text-image__icon">
+				<div class="text-image__icon-circle">
+					<img src="{{ feature.icon }}" alt="{{ feature.title }}">
+				</div>
+				<span class="text-image__icon-label">{{ feature.title }}</span>
+			</li>
+		</ul>
+		<app-button [label]="'Read more'" [link]="'#'"></app-button>
+	</div>
+</div>
