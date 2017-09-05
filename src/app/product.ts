@@ -2,7 +2,7 @@ export class Product {
 	id: number;
 	name: string;
 	price: number;
-	image: string;
+	images: object;
 	qtySold: number;
 	onSale: boolean;
 	newArrival: boolean;

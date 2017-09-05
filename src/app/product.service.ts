@@ -11,4 +11,8 @@ export class ProductService {
 	getProducts(): Product[] {
 		return PRODUCTS;
 	}
+
+	getProduct(id: number): Product {
+		return PRODUCTS.filter(product => product.id === id)[0];
+	}
 }
