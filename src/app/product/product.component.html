@@ -1,0 +1,26 @@
+<div class="product">
+	<div class="product__inner">
+		<a href="#" class="">
+			<img src="{{ product.image }}" alt="" class="product__image">
+		</a>
+		<div class="product__overlay">
+			<a href="#" class="product__icon">
+				<div class="product__icon-circle">
+					<img src="{{ icons[0].icon }}" alt="">
+				</div>
+				<span class="product__icon-label">Quick view</span>
+			</a>
+			<a href="#" class="product__icon">
+				<div class="product__icon-circle">
+					<img src="{{ icons[1].icon }}" alt="">
+				</div>
+				<span class="product__icon-label">Quick view</span>
+			</a>
+		</div>
+	</div>
+	<div class="product__meta">
+		<h2 class="product__title">{{ product.name }}</h2>
+		<span class="product__price">${{ product.price }}</span>
+		<app-add-to-cart></app-add-to-cart>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+@import '../../assets/styles/include';
+
+.featured-products {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;
+	}
+}

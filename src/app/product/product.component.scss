@@ -1,0 +1,97 @@
+@import '../../assets/styles/include';
+
+.product {
+	width: 270px;
+	height: auto;
+
+	&:hover & {
+		&__overlay {
+			visibility: visible;
+			bottom: 0;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+
+	&__overlay {
+		position: absolute;
+		bottom: -82px;
+		visibility: hidden;
+		width: 100%;
+		height: 120px;
+		padding: 0 40px;
+		background: rgba(255,255,255,0.8);
+		transition: bottom .3s;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;;
+		align-items: center;
+	}
+
+	&__icon {
+		/** flex */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+
+	&__icon-circle {
+		width: 45px;
+		height: 45px;
+		background: $c_primary;
+		margin-bottom: 10px;
+		border-radius: 50%;
+		/** Flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			transform: scale(0.09);
+		}
+	}
+
+	&__icon-label {
+		font-size: $ps_small;
+		color: $c_dark_grey;
+	}	
+
+	&__meta {
+		width: 100%;
+		height: auto;
+		/** Flex */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		flex-basis: 100%;
+		height: 50px;
+		color: $c_dark_grey;
+		font-size: $hs_xxxsmall;
+		/** Flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__price {
+		font-size: $hs_xxsmall;
+		font-weight: 600;
+		color: $c_dark_grey;
+	}
+}

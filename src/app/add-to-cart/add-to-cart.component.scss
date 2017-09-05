@@ -1,0 +1,22 @@
+@import '../../assets/styles/include';
+
+.add-to-cart {
+	height: 33px;
+	padding: 0 20px;
+	border: 1px solid $c_dark_grey;
+	text-decoration: none;
+	/** flex */
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		height: 18px;
+		margin-right: 5px;
+	}
+
+	&__label {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $c_dark_grey;
+	}
+}
