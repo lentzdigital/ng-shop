@@ -1,0 +1,102 @@
+@import '../../assets/styles/include';
+
+.cover-overview {
+	position: relative;
+	width: 100%;
+	height: 575px;
+
+	@include mobile() {
+		height: 360px;
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		opacity: 0.5;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__inner {
+		@extend .inner;
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		/** Flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__sub-title {
+		position: relative;
+		font-size: $hs_xlarge;
+		font-weight: 300;
+		text-transform: lowercase;
+		color: #fff;
+
+		@include mobile() {
+			font-size: $hs_m_xlarge;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -265px;
+			transform: translateY(-50%);
+			width: 255px;
+			height: 1px;
+			background: #fff;
+
+			@include mobile() {
+				content: none;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: -265px;
+			transform: translateY(-50%);
+			width: 255px;
+			height: 1px;
+			background: #fff;
+
+			@include mobile() {
+				content: none;
+			}
+		}
+	}
+
+	&__title {
+		font-size: $hs_xxlarge;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		margin-bottom: 35px;
+
+		@include mobile() {
+			font-size: $hs_m_xxlarge;
+		}
+	}
+}
