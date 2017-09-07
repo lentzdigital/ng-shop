@@ -1,0 +1,65 @@
+@import '../../assets/styles/include';
+
+:host-context(.newsletter-banner) {
+	display: block;
+	margin: 0 7.5px;
+}
+
+.input {
+	width: 100%;
+	min-width: 270px;
+	height: 40px;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: $ps_medium;
+	text-transform: uppercase;
+	text-align: center;
+	appearance: none;
+	background: none;
+
+	&--underline {
+		color: $c_dark_grey;
+		border: none;
+		border-bottom: 1px solid $c_dark_grey;
+
+		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			color: $c_dark_grey;
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color: $c_dark_grey;
+			opacity:  1;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color: $c_dark_grey;
+			opacity:  1;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: $c_dark_grey;
+		}
+		&::-ms-input-placeholder { /* Microsoft Edge */
+			color: $c_dark_grey;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color: #fff;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: #fff;
+		opacity:  1;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: #fff;
+		opacity:  1;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: #fff;
+	}
+	&::-ms-input-placeholder { /* Microsoft Edge */
+		color: #fff;
+	}
+}
