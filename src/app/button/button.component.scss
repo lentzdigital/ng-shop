@@ -9,6 +9,16 @@
 	margin: 0 7.5px;
 }
 
+:host-context(.newsletter-box) {
+	width: 100%;
+
+	.button {
+		@include mobile() {
+			min-width: auto;
+		}
+	}
+}
+
 .button {
 	width: 100%;
 	min-width: 270px;
@@ -31,6 +41,12 @@
 	&--light-grey {
 		background: $c_very_light_grey;
 		color: $c_dark_grey;
+	}
+
+	&--black-outline {
+		border: 2px solid $c_dark_grey;
+		color: $c_dark_grey;
+		height: 50px;
 	}
 
 	&--size-guide {

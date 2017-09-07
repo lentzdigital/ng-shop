@@ -1,0 +1,131 @@
+@import '../../assets/styles/include';
+
+.contact-form {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		padding-bottom: 0;
+	}
+
+	&__confirmation {
+		font-size: $hs_xsmall;
+		color: $c_dark_grey;
+		line-height: 1.6;
+		text-align: center;
+	}
+
+	&__row {
+		width: 100%;
+		height: auto;
+		margin-bottom: 35px;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile() {
+			display: block;
+		}
+
+		&--last {
+			margin-bottom: 0;
+		}
+
+		&--text-area {
+			display: block;
+
+			textarea {
+				width: 100%;
+				height: 300px;
+				resize: none;
+				border: 2px solid $c_dark_grey;
+				padding: 15px;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		button {
+			display: inline-block;
+			width: 270px;
+			line-height: 47px;
+			height: 50px;
+			border: 2px solid #fff;
+			color: #fff;
+			background: $c_primary;
+			font-size: $ps_medium;
+			text-decoration: none;
+			text-transform: uppercase;
+			/** Flex */
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			transition: letter-spacing .3s, background .3s;
+
+			@include mobile() {
+				width: 100%;
+			}
+
+			&:hover {
+				letter-spacing: 0.8px;
+			}
+
+			&:disabled {
+				background: $c_light_grey;
+			}
+		}
+
+		label {
+			display: block;
+			font-size: $ps_large;
+			color: $c_dark_grey;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__column {
+		width: 570px;
+		height: auto;
+
+		@include mobile() {
+			width: 100%;
+			margin-bottom: 35px;
+		}
+
+		input {
+			width: 100%;
+			height: 50px;
+			color: $c_dark_grey;
+			border: none;
+			border-bottom: 2px solid $c_dark_grey;
+
+			&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color: $c_dark_grey;
+			}
+			&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				color: $c_dark_grey;
+				opacity:  1;
+			}
+			&::-moz-placeholder { /* Mozilla Firefox 19+ */
+				color: $c_dark_grey;
+				opacity:  1;
+			}
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color: $c_dark_grey;
+			}
+			&::-ms-input-placeholder { /* Microsoft Edge */
+				color: $c_dark_grey;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__warning {
+		color: #e74c3c;
+	}
+}

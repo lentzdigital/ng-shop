@@ -1,3 +1,4 @@
+<app-menu [@slideInOut]="menuState"></app-menu>
 <header class="header" [ngClass]="detectRoute()">
 	<div class="header__inner">
 		<a [routerLink]="['/']">
@@ -9,6 +10,12 @@
 					<a href="#" class="header-menu__link">
 						<img src="{{ menuItem.icons[0] }}" srcset="{{ menuItem.icons[1] }} 2x, {{ menuItem.icons[2] }} 3x" alt="" class="header-menu__icon">
 						<span [hidden]="!menuItem.text" class="header-menu__label">{{ menuItem.text }}</span>
+					</a>
+				</li>
+				<li class="header-menu__list-item">
+					<a href="#" (click)="toggleMenu($event)" class="header-menu__link">
+						<img src="assets/img/icons/menu.png" srcset="assets/img/icons/menu@2x.png 2x, assets/img/icons/menu@3x.png 3x" alt="" class="header-menu__icon">
+						<span [hidden]="true" class="header-menu__label"></span>
 					</a>
 				</li>
 			</ul>

@@ -11,6 +11,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 700px;
+	}
+
+	&__slider {
+		display: inline-flex;
+	}
+
+	&__slide {
+		width: 700px;
 	}
 
 	&__image {

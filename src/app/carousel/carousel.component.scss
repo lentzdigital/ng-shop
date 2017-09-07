@@ -6,6 +6,10 @@
 	height: 575px;
 	background: $c_primary;
 
+	@include mobile() {
+		height: 360px;
+	}
+
 	&__inner {
 		position: relative;
 		width: 90%;
@@ -21,6 +25,10 @@
 		left: -2.25%;
 		bottom: 0;
 		z-index: 1;
+
+		@include mobile() {
+			display: none;
+		}
 	}
 
 	&__content {
@@ -39,6 +47,10 @@
 		line-height: 0.8;
 		margin: 0;
 		margin-bottom: 15px;
+
+		@include mobile() {
+			font-size: 50px;
+		}
 
 		&:first-line {
 			font-size: 50px;

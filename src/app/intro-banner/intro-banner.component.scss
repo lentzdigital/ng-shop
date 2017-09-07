@@ -1,0 +1,10 @@
+@import '../../assets/styles/include';
+
+.intro-banner {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		font-size: 0;
+	}
+}

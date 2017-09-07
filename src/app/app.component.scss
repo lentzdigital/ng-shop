@@ -1,6 +1,13 @@
+@import '../assets/styles/include';
+
 .app {
+	position: relative;
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
-	max-width: 1170px;
+	overflow: hidden;
+
+	@include mobile() {
+		max-width: 420px;
+	}
 }

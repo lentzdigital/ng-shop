@@ -1,13 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Location, NgClass } from '@angular/common';
 import { Router } from '@angular/router';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.scss']
+	styleUrls: ['./header.component.scss'],
+	animations: [
+	    trigger('slideInOut', [
+	      state('in', style({
+	        transform: 'translate3d(0, 0, 0)'
+	      })),
+	      state('out', style({
+	        transform: 'translate3d(-270px, 0, 0)'
+	      })),
+	      transition('in => out', animate('400ms ease-in-out')),
+	      transition('out => in', animate('400ms ease-in-out'))
+	    ]),
+	  ]
 })
 export class HeaderComponent implements OnInit {
+	menuState: string = 'in';
 	logoPaths: object;
 	menuItems: object;
 	currRoute: string;
@@ -49,15 +65,7 @@ export class HeaderComponent implements OnInit {
 					'/assets/img/icons/search@2x.png',
 					'/assets/img/icons/search@3x.png'
 				]
-			},
-			{
-				text  : null,
-				icons : [
-					'/assets/img/icons/menu.png',
-					'/assets/img/icons/menu@2x.png',
-					'/assets/img/icons/menu@3x.png'
-				]
-			},
+			}
 		];
 	}
 
@@ -67,5 +75,10 @@ export class HeaderComponent implements OnInit {
 		}
 		
 		return;
+	}
+
+	toggleMenu(e) {
+		e.preventDefault();
+		this.menuState = this.menuState === 'out' ? 'in' : 'out';
 	}
 }

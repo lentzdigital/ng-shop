@@ -5,6 +5,11 @@
 	margin: 0 7.5px;
 }
 
+:host-context(.newsletter-box) {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
 .input {
 	width: 100%;
 	min-width: 270px;
@@ -14,13 +19,13 @@
 	font-size: $ps_medium;
 	text-transform: uppercase;
 	text-align: center;
-	appearance: none;
 	background: none;
 
 	&--underline {
 		color: $c_dark_grey;
 		border: none;
-		border-bottom: 1px solid $c_dark_grey;
+		border-bottom: 2px solid $c_dark_grey;
+		min-width: auto;
 
 		&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 			color: $c_dark_grey;

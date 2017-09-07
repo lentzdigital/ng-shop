@@ -52,5 +52,9 @@
 		font-size: $hs_large;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		@include mobile() {
+			font-size: $hs_m_large;
+		}
 	}
 }

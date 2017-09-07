@@ -10,6 +10,7 @@ export class TestimonialsComponent implements OnInit {
 	private slide: ElementRef;
 	testimonials: any;
 	sliderWidth: number;
+	currentSlide: number = 1;
 
 	constructor() { }
 
@@ -42,7 +43,7 @@ export class TestimonialsComponent implements OnInit {
 
 	setSliderWidth(): void {
 		let slideCount  = this.testimonials.length,
-			slideWidth  = this.slide[0].nativeElement.offsetWidth,
+			slideWidth  = this.slide.nativeElement.offsetWidth,
 			sliderWidth = slideCount * slideWidth;
 
 		this.sliderWidth = sliderWidth;

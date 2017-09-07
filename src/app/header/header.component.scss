@@ -7,9 +7,21 @@
  */
 @import '../../assets/styles/include';
 
+:host {
+	overflow: hidden;
+}
+
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
 	width: 100%;
 	height: 110px;
+
+	@include mobile() {
+		height: 80px;
+	}
 
 	&--dark {
 		background: $c_dark_grey;

@@ -23,6 +23,8 @@ export class ButtonComponent implements OnInit {
 			classes = 'button--blue';
 		} else if(style === 'white-outline') {
 			classes = 'button--white-outline';
+		} else if(style === 'black-outline') {
+			classes = 'button--black-outline';
 		} else if(style === 'light-grey') {
 			classes = 'button--light-grey';
 		} else if(style === 'size-guide') {

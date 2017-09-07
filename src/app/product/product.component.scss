@@ -1,27 +1,44 @@
 @import '../../assets/styles/include';
 
 :host(app-product) {
+
 	&:nth-last-child(1) {
 		.product--with-margin {
 			padding-bottom: 0;
+
+			@include mobile() {
+				padding-bottom: 50px;
+			}
 		}
 	}
 
 	&:nth-last-child(2) {
 		.product--with-margin {
 			padding-bottom: 0;
+
+			@include mobile() {
+				padding-bottom: 50px;
+			}
 		}
 	}
 
 	&:nth-last-child(3) {
 		.product--with-margin {
 			padding-bottom: 0;
+
+			@include mobile() {
+				padding-bottom: 50px;
+			}
 		}
 	}
 
 	&:nth-last-child(4) {
 		.product--with-margin {
 			padding-bottom: 0;
+
+			@include mobile() {
+				padding-bottom: 50px;
+			}
 		}
 	}
 }
@@ -44,10 +61,6 @@
 			visibility: visible;
 			bottom: 0;
 		}
-	}
-
-	&:last-child {
-		margin-bottom: 0;
 	}
 
 	&__inner {

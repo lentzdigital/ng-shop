@@ -1,0 +1,43 @@
+<div class="contact-form">
+	<form (ngSubmit)="submitForm()" *ngIf="!submitted; else showConfirmation" #contactForm="ngForm" class="contact-form__inner">
+		<div class="contact-form__row">
+			<div class="contact-form__column">
+				<label for="firstName">
+					First name <span *ngIf="!firstName.valid && !firstName.pristine" class="contact-form__warning">(First name is required)</span>
+				</label>
+				<input #firstName="ngModel" [(ngModel)]="person.firstName" type="text" name="firstName" id="firstName" required>
+			</div>
+			<div class="contact-form__column">
+				<label for="lastName">
+					Last name <span *ngIf="!lastName.valid && !lastName.pristine" class="contact-form__warning">(Last name is required)</span>
+				</label>
+				<input #lastName="ngModel" [(ngModel)]="person.lastName" type="text" name="lastName" id="lastName" required>
+			</div>
+		</div>
+		<div class="contact-form__row">
+			<div class="contact-form__column">
+				<label for="email">
+					E-mail <span *ngIf="!email.valid && !email.pristine" class="contact-form__warning">(E-mail is required)</span>
+				</label>
+				<input #email="ngModel" [(ngModel)]="person.email" type="email" name="email" id="email" required>
+			</div>
+			<div class="contact-form__column">
+				<label for="phone">Phone</label>
+				<input #phone="ngModel" [(ngModel)]="person.phone" type="phone" name="phone" id="phone">
+			</div>
+		</div>
+		<div class="contact-form__row contact-form__row--text-area">
+			<label for="message">Message <span *ngIf="!message.valid && !message.pristine" class="contact-form__warning">(Message is required)</span></label>
+			<textarea #message="ngModel" [(ngModel)]="person.message" name="message" id="message" cols="30" rows="10" required></textarea>
+		</div>
+		<div class="contact-form__row contact-form__row--last">
+			<button type="submit" [disabled]="contactForm.invalid">Send message</button>
+		</div>
+	</form>
+</div>
+
+<ng-template #showConfirmation>
+	<div class="contact-form__inner">
+		<span class="contact-form__confirmation">Thank you for contacting us {{ person.firstName }}, we will respond as fast as possible</span>
+	</div>
+</ng-template>
