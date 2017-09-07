@@ -1,0 +1,18 @@
+@import '../../assets/styles/include';
+
+.newsletter-banner {
+	@extend .outer;
+	background: $c_primary;
+
+	&__inner {
+		@extend .inner;
+		/** flex */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include mobile() {
+			flex-direction: column;
+		}
+	}
+}
