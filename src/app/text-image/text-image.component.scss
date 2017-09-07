@@ -7,8 +7,17 @@
 	/** Flex */
 	display: flex;
 
+	@include mobile() {
+		flex-direction: column;
+		height: auto;
+	}
+
 	&--reverse {
 		flex-direction: row-reverse;
+
+		@include mobile() {
+			flex-direction: column;
+		}
 
 		.text-image__content {
 			&:after {
@@ -23,10 +32,19 @@
 		height: 100%;
 		background: #F3F1F6;
 
+		@include mobile() {
+			width: 100%;
+			height: 400px;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
+
+			@include mobile() {
+				object-fit: cover;
+			}
 		}
 	}
 
@@ -38,6 +56,12 @@
 		max-width: 585px;
 		background: $c_dark_grey;
 
+		@include mobile() {
+			width: 100%;
+			height: auto;
+			padding: $p_mobile;
+		}
+
 		&:after {
 			position: absolute;
 			top: 0;
@@ -47,6 +71,10 @@
 			width: 1000%;
 			height: 100%;
 			background: $c_dark_grey;
+
+			@include mobile() {
+				display: none;
+			}
 		}
 
 		&--blue {
@@ -90,6 +118,10 @@
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
+
+		@include mobile() {
+			width: 100px;
+		}
 	}
 
 	&__icon-circle {
@@ -103,8 +135,17 @@
 		justify-content: center;
 		align-items: center;
 
+		@include mobile() {
+			width: 40px;
+			height: 40px;
+		}
+
 		img {
-			transform: scale(0.15);
+			height: 20px;
+
+			@include mobile() {
+				height: 10px;
+			}
 		}
 	}
 
