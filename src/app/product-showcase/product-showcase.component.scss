@@ -1,0 +1,17 @@
+@import '../../assets/styles/include';
+
+.product-showcase {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+
+		@include mobile() {
+			flex-direction: column;
+		}
+	}
+}

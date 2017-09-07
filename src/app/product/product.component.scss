@@ -1,14 +1,53 @@
 @import '../../assets/styles/include';
 
+:host(app-product) {
+	&:nth-last-child(1) {
+		.product--with-margin {
+			padding-bottom: 0;
+		}
+	}
+
+	&:nth-last-child(2) {
+		.product--with-margin {
+			padding-bottom: 0;
+		}
+	}
+
+	&:nth-last-child(3) {
+		.product--with-margin {
+			padding-bottom: 0;
+		}
+	}
+
+	&:nth-last-child(4) {
+		.product--with-margin {
+			padding-bottom: 0;
+		}
+	}
+}
+
 .product {
 	width: 270px;
 	height: auto;
+
+	&--with-margin {
+		padding-bottom: 50px;
+	}
+
+	@include mobile() {
+		width: 100%;
+		margin-bottom: 40px;
+	}
 
 	&:hover & {
 		&__overlay {
 			visibility: visible;
 			bottom: 0;
 		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
 	}
 
 	&__inner {
@@ -59,7 +98,7 @@
 		align-items: center;
 
 		img {
-			transform: scale(0.09);
+			height: 17px;
 		}
 	}
 

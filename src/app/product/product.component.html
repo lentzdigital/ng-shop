@@ -1,7 +1,7 @@
-<div class="product">
+<div class="product" [ngClass]="addMargin(margin)">
 	<div class="product__inner">
-		<a href="#" class="">
-			<img src="{{ product.image }}" alt="" class="product__image">
+		<a [routerLink]="['/product', product.id]">
+			<img src="{{ product.images.big }}" alt="" class="product__image">
 		</a>
 		<div class="product__overlay">
 			<a href="#" class="product__icon">

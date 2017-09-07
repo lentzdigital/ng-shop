@@ -9,6 +9,7 @@ import { AddToCartComponent } from '../add-to-cart/add-to-cart.component';
 })
 export class ProductComponent implements OnInit {
 	@Input() product: Product;
+	@Input() margin: boolean;
 
 	icons: object;
 
@@ -27,4 +28,11 @@ export class ProductComponent implements OnInit {
 		];
 	}
 
+	addMargin(input) {
+		if(input === true) {
+			return 'product--with-margin';
+		}
+
+		return;
+	}
 }
