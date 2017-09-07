@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location, NgClass } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-header',
@@ -8,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 	logoPaths: object;
 	menuItems: object;
+	currRoute: string;
 
-	constructor() { }
+	constructor(private router: Router, private location: Location) {
+	}
 
 	ngOnInit() {
+		this.currRoute = this.location.path().substring(0, 9);
+		console.log(this.currRoute)
+
 		this.logoPaths = {
 			x1 : '/assets/img/general/logo.png',
 			x2 : '/assets/img/general/logo@2x.png',
@@ -54,4 +61,11 @@ export class HeaderComponent implements OnInit {
 		];
 	}
 
+	detectRoute() {
+		if(this.currRoute === '/product/') {
+			return 'header--dark';
+		}
+		
+		return;
+	}
 }

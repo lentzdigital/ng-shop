@@ -1,6 +1,6 @@
-<header class="header">
+<header class="header" [ngClass]="detectRoute()">
 	<div class="header__inner">
-		<a href="#">
+		<a [routerLink]="['/']">
 			<img src="{{ logoPaths.x1 }}" srcset="{{ logoPaths.x2 }} 2x, {{ logoPaths.x3 }} 3x" class="header__logo">
 		</a>
 		<nav class="header-menu">
