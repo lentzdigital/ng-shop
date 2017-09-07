@@ -1,0 +1,30 @@
+@import '../../assets/styles/include';
+
+.big-banner {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile() {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__group {
+		/** flex */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
