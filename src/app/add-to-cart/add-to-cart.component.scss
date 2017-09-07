@@ -9,6 +9,19 @@
 	display: inline-flex;
 	align-items: center;
 
+	&--blue {
+		width: 100%;
+		height: 50px;
+		background: $c_primary;
+		justify-content: center;
+		border: none;
+		margin-bottom: 10px;
+
+		.add-to-cart__label {
+			color: #fff;
+		}
+	}
+
 	&__icon {
 		height: 18px;
 		margin-right: 5px;

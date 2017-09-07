@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
 	selector: 'app-add-to-cart',
@@ -6,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent implements OnInit {
+	@Input() white: boolean;
 	icon: string;
 	label: string;
 
 	constructor() { }
 
 	ngOnInit() {
-		this.icon = 'assets/img/icons/cart.svg';
+		if(this.white === true) {
+			this.icon = 'assets/img/icons/cart-white.svg'
+		} else {
+			this.icon = 'assets/img/icons/cart.svg';
+		}
 		this.label = 'Add to cart';
 	}
 
+	getStyle(style) {
+		if(style === 'blue') {
+			return 'add-to-cart--blue';
+		}
+
+		return;
+	}
 }
