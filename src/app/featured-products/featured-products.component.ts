@@ -12,14 +12,14 @@ import { ProductService } from '../product.service';
 export class FeaturedProductsComponent implements OnInit {
 	products: Product[];
 
-	constructor(private ProductService: ProductService) { }
+	constructor(private productService: ProductService) { }
 
 	ngOnInit() {
 		this.getProducts();
 	}
 
 	getProducts(): void {
-		this.products = this.ProductService.getProducts();
+		this.products = this.productService.getProducts();
 	}
 
 }
