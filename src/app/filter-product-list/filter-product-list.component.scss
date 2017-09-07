@@ -3,6 +3,10 @@
 .filter-product-list {
 	@extend .outer;
 
+	@include mobile() {
+		display: none;
+	}
+
 	&__inner {
 		@extend .inner;
 	}

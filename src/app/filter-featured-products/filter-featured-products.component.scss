@@ -17,10 +17,18 @@
 		/** Flex */
 		display: flex;
 		justify-content: center;
+
+		@include mobile() {
+			justify-content: space-between;
+		}
 	}
 
 	&__filter {
 		margin: 0 25px;
+
+		@include mobile() {
+			margin: 0;
+		}
 
 		a {
 			position: relative;
@@ -29,6 +37,10 @@
 			text-transform: uppercase;
 			font-size: 18px;
 			font-weight: 600;
+
+			@include mobile() {
+				font-size: 12px;
+			}
 
 			&:after {
 				visibility: hidden;
@@ -41,6 +53,10 @@
 				height: 2px;
 				background: $c_dark_grey;
 				transition: bottom .3s;
+
+				@include mobile() {
+					width: 25px;
+				}
 			}
 
 			&:hover {
