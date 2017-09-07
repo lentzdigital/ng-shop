@@ -1,0 +1,10 @@
+<div class="tabs">
+	<ul class="tabs__tab-container">
+		<li *ngFor="let tab of tabs" (click)="selectTab($event, tab)" [ngClass]="{ 'tabs__tab-item--active' : selectedTab == tab }" class="tabs__tab-item">
+			<a href="#">{{ tab.label }}</a>
+		</li>
+	</ul>
+	<div class="tabs__content">
+		<p>{{ currContent.content }}</p>
+	</div>
+</div>

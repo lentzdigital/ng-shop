@@ -1,0 +1,10 @@
+<div class="product-images">
+	<div class="product-images__thumbnails">
+		<a *ngFor="let image of images.small" href="#" class="product-images__thumbnail-link">
+			<img src="{{ image }}" class="product-images__thumbnail">
+		</a>
+	</div>
+	<div class="product-images__image-container">
+		<img src="{{ images.big }}" class="product-images__image">
+	</div>
+</div>

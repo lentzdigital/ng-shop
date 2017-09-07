@@ -1,0 +1,23 @@
+<div class="product-details">
+	<div class="product-details__group">
+		<div class="product-details__main">
+			<h1 class="product-details__title">{{ info.name }}</h1>
+			<div class="product-details__meta">
+				<span class="product-details__price">${{ info.price }}</span>
+				<span class="product-details__shipping">
+					<img src="{{ shipping.icon }}" alt="{{ shipping.title }}" class="product-details__shipping-icon">
+					<span class="product-details__shipping-label">{{ shipping.title }}</span>
+				</span>
+			</div>
+			<app-dropdown [options]="variants"></app-dropdown>
+			<app-dropdown [options]="sizes"></app-dropdown>
+			<app-add-to-cart [white]="true" [style]="'blue'"></app-add-to-cart>
+			<app-button [label]="'Save for later'" [link]="'#'" [style]="'light-grey'"></app-button>
+		</div>
+		<div class="product-details__aside">
+			<app-button [label]="'Size guide'" [link]="'#'" [style]="'size-guide'"></app-button>
+			<app-share-button></app-share-button>
+		</div>
+	</div>
+	<app-tabs></app-tabs>
+</div>

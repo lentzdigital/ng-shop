@@ -6,8 +6,10 @@ import { NgClass } from '@angular/common';
 	templateUrl: './add-to-cart.component.html',
 	styleUrls: ['./add-to-cart.component.scss']
 })
+
 export class AddToCartComponent implements OnInit {
 	@Input() white: boolean;
+	@Input() style: string;
 	icon: string;
 	label: string;
 

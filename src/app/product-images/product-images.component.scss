@@ -1,0 +1,64 @@
+@import '../../assets/styles/include';
+
+:host(app-product-images) {
+	width: 48%;
+
+	@include mobile() {
+		width: 100%;
+	}
+}
+
+.product-images {
+	width: 100%;
+	height: auto;
+	/** Flex */
+	display: flex;
+	justify-content: space-between;
+
+	@include mobile() {
+		flex-direction: column-reverse;
+	}
+
+	&__thumbnails {
+		width: 12%;
+		height: auto;
+
+		@include mobile() {
+			width: 100%;
+			/** Flex */
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__thumbnail-link {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 15px;
+
+		@include mobile() {
+			width: 18%;
+		}
+	}
+
+	&__thumbnail {
+		width: 100%;
+		height: auto;
+	}
+
+	&__image-container {
+		width: 82%;
+		height: auto;
+
+		@include mobile() {
+			width: 100%;
+			margin-bottom: 2.2%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+}
