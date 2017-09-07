@@ -1,3 +1,5 @@
+@import '../../assets/styles/include';
+
 .footer {
 	width: 100%;
 	height: auto;
@@ -13,6 +15,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		@include mobile() {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
 	}
 
 	&__title {
@@ -21,6 +29,13 @@
 		text-transform: uppercase;
 		color: #fff;
 		margin-bottom: 20px;
+	}
+
+	&__menu {
+		@include mobile() {
+			width: 100%;
+			margin-bottom: 45px;
+		}
 	}
 
 	&__menu-item {
@@ -36,6 +51,11 @@
 
 	&__payment {
 		align-self: center;
+
+		@include mobile() {
+			width: 200px;
+			margin-bottom: 45px;
+		}
 	}
 
 	&__logo-container {
