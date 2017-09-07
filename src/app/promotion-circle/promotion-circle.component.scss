@@ -1,0 +1,87 @@
+@import '../../assets/styles/include';
+
+.promotion-circle {
+	@extend .outer;
+	position: relative;
+	height: 440px;
+
+	&__background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		opacity: 0.5;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__inner {
+		@extend .inner;
+		position: relative;
+		z-index: 1;
+		/** Flex */
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__big-text {
+		font-size: 60px;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #fff;
+
+		@include mobile() {
+			display: none;
+		}
+	}
+
+	&__circle {
+		width: 310px;
+		height: 310px;
+		background: rgba(51, 208, 222, 0.7);
+		border-radius: 50%;
+		/** Flex */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__label {
+		font-size: 32px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	&__value {
+		position: relative;
+		font-size: 180px;
+		font-weight: 300;
+		margin: -15px 0;
+		color: #fff;
+
+		&:after {
+			content: '%';
+			position: absolute;
+			right: -25px;
+			top: 30px;
+			font-size: 70px;
+		}
+	}
+}
