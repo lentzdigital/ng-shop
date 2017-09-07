@@ -4,7 +4,9 @@
  */
 
 $c_primary: #33d0de;
+$c_very_light_grey: #eee;
 $c_light_grey: #c5c5c5;
+$c_grey: #939393;
 $c_dark_grey: #333;
 
 /**
@@ -25,6 +27,16 @@ $hs_xsmall: 30px;
 $hs_xxsmall: 20px;
 $hs_xxxsmall: 14px;
 
+$hs_m_xlarge: 34px;
+$hs_m_large: 26px;
+
 $ps_large: 16px;
 $ps_medium: 14px;
 $ps_small: 12px;
+
+/**
+ * Padding & margin variables
+ * 
+ */
+
+$p_mobile: 65px 15px;

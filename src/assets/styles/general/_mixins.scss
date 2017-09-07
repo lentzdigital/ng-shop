@@ -1,0 +1,10 @@
+/**
+ * Mixin for adding mobile breakpoint
+ * 
+ */
+
+@mixin mobile() {
+  @media (max-width: 1200px) { 
+    @content; 
+  }
+}

@@ -9,4 +9,9 @@
 	max-width: 1170px;
 	margin: 0 auto;
 	padding: 65px 0;
+
+	@include mobile() {
+		width: 100%;
+		padding: $p_mobile;
+	}
 }
