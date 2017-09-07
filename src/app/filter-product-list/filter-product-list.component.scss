@@ -1,0 +1,50 @@
+@import '../../assets/styles/include';
+
+.filter-product-list {
+	@extend .outer;
+
+	&__inner {
+		@extend .inner;
+	}
+
+	&__filters {
+		width: 100%;
+		height: auto;
+		/** Flex */
+		display: flex;
+		align-items: center;
+	}
+
+	&__breadcrumb {
+		font-size: $ps_medium;
+		font-weight: 600;
+		color: $c_dark_grey;
+		margin-right: 50px;
+	}
+
+	&__filter {
+		margin-right: 50px;
+		/** flex */
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			font-size: $ps_medium;
+			font-weight: 600;
+			color: $c_dark_grey;
+			text-transform: uppercase;
+			text-decoration: none;
+			margin-right: 10px;
+		}
+	}
+
+	&__arrow {
+		display: block;
+		width: 0; 
+		height: 0; 
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 4px solid $c_dark_grey;
+	}
+}

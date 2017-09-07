@@ -1,0 +1,11 @@
+<div class="filter-product-list">
+	<div class="filter-product-list__inner">
+		<ul class="filter-product-list__filters">
+			<li class="filter-product-list__breadcrumb">{{ breadcrumb }}</li>
+			<li *ngFor="let filter of filters"  class="filter-product-list__filter">
+				<a href="#">{{ filter }}</a>
+				<span class="filter-product-list__arrow"></span>
+			</li>
+		</ul>
+	</div>
+</div>
