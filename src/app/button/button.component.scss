@@ -1,7 +1,17 @@
 @import '../../assets/styles/include';
 
+:host(app-button){
+	display: inline-block;
+}
+
+:host-context(.newsletter-banner) {
+	display: block;
+	margin: 0 7.5px;
+}
+
 .button {
-	width: 270px;
+	width: 100%;
+	min-width: 270px;
 	height: 40px;
 	border: 2px solid #fff;
 	color: #fff;
@@ -9,12 +19,41 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	/** Flex */
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	transition: letter-spacing .3s;
 
+	@include mobile() {
+		width: 100%;
+	}
+
+	&--light-grey {
+		background: $c_very_light_grey;
+		color: $c_dark_grey;
+	}
+
+	&--size-guide {
+		position: absolute;
+		bottom: 108px;
+		min-width: auto;
+		height: 43px;
+		font-size: $ps_small;
+		text-transform: none;
+
+		@include mobile() {
+			position: static;
+			display: inline-flex;
+			padding: 0 10px;
+		}
+	}
+
+	&--white {
+		background: #fff;
+		color: $c_dark_grey;
+	}
+
 	&:hover {
-		letter-spacing: 1px;
+		letter-spacing: 0.8px;
 	}
 }

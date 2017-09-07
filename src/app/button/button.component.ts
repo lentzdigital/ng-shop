@@ -21,6 +21,14 @@ export class ButtonComponent implements OnInit {
 
 		if(style === 'blue') {
 			classes = 'button--blue';
+		} else if(style === 'white-outline') {
+			classes = 'button--white-outline';
+		} else if(style === 'light-grey') {
+			classes = 'button--light-grey';
+		} else if(style === 'size-guide') {
+			classes = 'button--light-grey button--size-guide';
+		} else if(style === 'white') {
+			classes = 'button--white';
 		} else {
 			classes = 'button--grey';
 		}
