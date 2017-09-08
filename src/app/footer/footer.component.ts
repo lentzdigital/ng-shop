@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+class LogoPaths {
+	x1: string;
+	x2: string;
+	x3: string;
+}
+
 @Component({
 	selector: 'app-footer',
 	templateUrl: './footer.component.html',
@@ -8,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 	menus: object;
 	payment: string;
-	logoPaths: object;
+	logoPaths: LogoPaths;
 
 	constructor() { }
 

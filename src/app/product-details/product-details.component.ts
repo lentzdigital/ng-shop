@@ -6,16 +6,21 @@ import { ButtonComponent } from '../button/button.component';
 import { TabsComponent } from '../tabs/tabs.component';
 import { ShareButtonComponent } from '../share-button/share-button.component';
 
+class Shipping {
+	title: string;
+	icon: string;
+}
+
 @Component({
 	selector: 'app-product-details',
 	templateUrl: './product-details.component.html',
 	styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-	@Input() info: object;
-	shipping: object;
-	variants: object;
-	sizes: object;
+	@Input() info;
+	shipping: Shipping;
+	variants: Array<string>;
+	sizes: Array<string>;
 
 	constructor() { }
 

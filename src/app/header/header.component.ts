@@ -5,6 +5,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 import { MenuComponent } from '../menu/menu.component';
 
+class LogoPaths {
+	x1: string;
+	x2: string;
+	x3: string;
+}
+
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
@@ -26,7 +32,7 @@ import { MenuComponent } from '../menu/menu.component';
 })
 export class HeaderComponent implements OnInit {
 	menuState: string = 'in';
-	logoPaths: object;
+	logoPaths: LogoPaths;
 	menuItems: object;
 	currRoute: string;
 
@@ -35,9 +41,6 @@ export class HeaderComponent implements OnInit {
 			this.menuState = 'in';
 			this.currRoute = this.location.path().substring(0, 9);
 		});
-	}
-
-	ngOnInit() {
 
 		this.logoPaths = {
 			x1 : '/assets/img/general/logo.png',
@@ -71,6 +74,9 @@ export class HeaderComponent implements OnInit {
 				]
 			}
 		];
+	}
+
+	ngOnInit() {
 	}
 
 	detectRoute() {

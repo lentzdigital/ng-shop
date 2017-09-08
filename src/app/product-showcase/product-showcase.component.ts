@@ -7,6 +7,11 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
+class Info {
+	name: string;
+	price: string;
+}
+
 @Component({
 	selector: 'app-product-showcase',
 	templateUrl: './product-showcase.component.html',
@@ -15,8 +20,8 @@ import { ProductService } from '../product.service';
 })
 export class ProductShowcaseComponent implements OnInit {
 	productId: number;
-	product: object;
-	info: object;
+	product;
+	info: Info;
 
 	constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) {
 	}

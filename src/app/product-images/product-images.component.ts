@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product } from '../product';
+import { Product, Images } from '../product';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -9,12 +9,12 @@ import { ProductService } from '../product.service';
 	styleUrls: ['./product-images.component.scss']
 })
 export class ProductImagesComponent implements OnInit {
-	@Input() images: object;
+	@Input() images: Images;
 
 	constructor() { }
 
 	ngOnInit() {
-		console.log(this.images);
+	
 	}
 
 }

@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { ButtonComponent } from '../button/button.component';
 
+class Button {
+	label: string;
+	link: string;
+}
+
 @Component({
 	selector: 'app-cover-overview',
 	templateUrl: './cover-overview.component.html',
@@ -10,7 +15,7 @@ import { ButtonComponent } from '../button/button.component';
 export class CoverOverviewComponent implements OnInit {
 	title: string;
 	subTitle: string;
-	button: object;
+	button: Button;
 	image: string;
 
 	constructor() { }
