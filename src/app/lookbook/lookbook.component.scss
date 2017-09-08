@@ -6,6 +6,14 @@
 	position: relative;
 	width: 30%;
 	height: 400px;
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover {
+		.lookbook__image {
+			transform: scale(1.15);
+		}
+	}
 
 	@include mobile() {
 		width: 100%;
@@ -15,6 +23,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: transform .3s;
 	}
 
 	&__overlay {

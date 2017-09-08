@@ -1,3 +1,7 @@
 @import 'assets/styles/general/variables';
 @import 'assets/styles/general/reset';
 @import 'assets/styles/general/typography';
+
+body {
+	overflow-x: hidden;
+}

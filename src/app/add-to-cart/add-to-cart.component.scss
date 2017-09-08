@@ -9,6 +9,12 @@
 	display: inline-flex;
 	align-items: center;
 
+	&:hover {
+		.add-to-cart__icon {
+			transform: translateX(-5px);
+		}
+	}
+
 	&--blue {
 		width: 100%;
 		height: 50px;
@@ -25,6 +31,7 @@
 	&__icon {
 		height: 18px;
 		margin-right: 5px;
+		transition: transform .3s;
 	}
 
 	&__label {

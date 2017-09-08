@@ -3,6 +3,7 @@
 .logo-slider {
 	@extend .outer;
 	background: $c_very_light_grey;
+	overflow: hidden;
 
 	&__inner {
 		@extend .inner;

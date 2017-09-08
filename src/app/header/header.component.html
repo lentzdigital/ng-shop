@@ -1,5 +1,6 @@
+<div class="overlay" (click)="toggleMenu($event)" [ngClass]="{ 'overlay--active' : menuState === 'out' }"></div>
 <app-menu [@slideInOut]="menuState"></app-menu>
-<header class="header" [ngClass]="detectRoute()">
+<header class="header" [ngClass]="{ 'header--dark' : detectRoute() }">
 	<div class="header__inner">
 		<a [routerLink]="['/']">
 			<img src="{{ logoPaths.x1 }}" srcset="{{ logoPaths.x2 }} 2x, {{ logoPaths.x3 }} 3x" class="header__logo">
