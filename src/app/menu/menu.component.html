@@ -1,8 +1,5 @@
-<ul>
-  <li>Menu Item</li>
-  <li>Menu Item</li>
-  <li>Menu Item</li>
-  <li>Menu Item</li>
-  <li>Menu Item</li>
-  <li>Menu Item</li>
+<ul class="menu">
+	<li *ngFor="let item of menuItems" class="menu__item">
+		<a [routerLink]="[item.route]">{{ item.label }}</a>
+	</li>
 </ul>

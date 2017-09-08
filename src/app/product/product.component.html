@@ -1,4 +1,4 @@
-<div class="product" [ngClass]="addMargin(margin)">
+<article class="product" [ngClass]="addMargin(margin)">
 	<div class="product__inner">
 		<a [routerLink]="['/product', product.id]">
 			<img src="{{ product.images.big }}" alt="" class="product__image">
@@ -23,4 +23,4 @@
 		<span class="product__price">${{ product.price }}</span>
 		<app-add-to-cart></app-add-to-cart>
 	</div>
-</div>
+</article>

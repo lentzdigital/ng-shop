@@ -1,7 +1,7 @@
-<div class="featured-products">
+<section class="featured-products">
 	<app-filter-featured-products></app-filter-featured-products>
 	<div class="featured-products__inner">
 		<app-product *ngFor="let product of products | slice:0:4; let i=index"
 			[product]="product"></app-product>
 	</div>
-</div>
+</section>

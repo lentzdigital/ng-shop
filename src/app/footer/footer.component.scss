@@ -46,6 +46,11 @@
 			color: #7b7b7b;
 			font-size: 14px;
 			text-decoration: none;
+			transition: color .3s;
+
+			&:hover {
+				color: lighten(#7b7b7b, 7%);
+			}
 		}
 	}
 

@@ -39,7 +39,12 @@
 	}
 
 	&__logo {
-		height: 25px;
+		width: 190px;
+
+		@include mobile() {
+			width: auto;
+			height: 25px;
+		}
 	}
 }
 
@@ -63,12 +68,20 @@
 		/** Flex */
 		display: flex;
 		align-items: center;
+		text-decoration: none;
+
+		&:hover {
+			.header-menu__icon {
+				transform: translateY(-5px);
+			}
+		}
 	}
 
 	&__icon {
 		width: auto;
 		height: 18px;
 		margin-right: 10px;
+		transition: transform .3s;
 
 		@include mobile() {
 			margin-right: 0;
@@ -83,5 +96,24 @@
 		@include mobile() {
 			display: none;
 		}
+	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: 0;
+	z-index: 9998;
+	visibility: hidden;
+	transition: opacity .4s;
+	cursor: pointer;
+
+	&--active {
+		opacity: 0.7;
+		visibility: visible;
 	}
 }

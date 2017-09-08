@@ -50,7 +50,7 @@
 		button {
 			display: inline-block;
 			width: 270px;
-			line-height: 47px;
+			line-height: 44px;
 			height: 50px;
 			border: 2px solid #fff;
 			color: #fff;
@@ -59,13 +59,14 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			/** Flex */
-			display: inline-flex;
+			display: flex;
 			justify-content: center;
 			align-items: center;
 			transition: letter-spacing .3s, background .3s;
 
 			@include mobile() {
 				width: 100%;
+				display: block;
 			}
 
 			&:hover {
