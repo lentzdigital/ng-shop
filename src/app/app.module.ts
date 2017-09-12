@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
 
 import { ProductService } from './product.service';
+import { TestimonialService } from './testimonial.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -112,7 +113,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
         BrowserAnimationsModule,
         FormsModule
     ],
-    providers: [ProductService],
+    providers: [ProductService, TestimonialService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

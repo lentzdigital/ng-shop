@@ -1,12 +1,14 @@
 <section class="testimonials">
-	<div class="testimonials__inner">
-		<img class="testimonials__image" src="{{ testimonials[0].image }}" alt="">
-		<h3 class="testimonials__title">{{ testimonials[0].name }}</h3>
-		<p class="testimonials__text">
-			{{ testimonials[0].content }}
-		</p>
-		<div class="testimonials__dots">
-			<div *ngFor="let dot of testimonials" class="testimonials__dot"></div>
+	<div class="testimonials__inner" #measureThis>
+		<div class="testimonials__slider" [style.width]="sliderWidth + 'px'" [style.transform]="'translateX('+ -offset +'px)'">
+			<div class="testimonials__slide" *ngFor="let item of tesArr" [style.width]="slideWidth + 'px'">
+				<img src="{{ item.image }}" alt="" class="testimonials__image">
+				<h3 class="testimonials__title">{{ item.name }}</h3>
+				<p class="testimonials__text">{{ item.content }}</p>
+			</div>
 		</div>
 	</div>
+	<ul class="testimonials__dots">
+		<li *ngFor="let item of tesArr" (click)="setCurrSlide(item.id)" [ngClass]="{ 'testimonials__dot--active' : item.id == currId }" class="testimonials__dot"></li>
+	</ul>
 </section>
